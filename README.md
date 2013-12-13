@@ -1,4 +1,3 @@
-northernsmokehouse
-==================
+Sycamore
 
-Northern Smokehouse BaseKit Template
+=====
