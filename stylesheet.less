@@ -127,7 +127,7 @@ blockquote {
 
 .main {
   position: relative;
-  border: 3px solid @color-swatch5;
+  border: 3px solid @color-swatch3;
   display: block;
   margin: 0 auto;
   padding:20px;
@@ -145,14 +145,14 @@ h1 {
   padding: 0px 20px;
   margin: 0;
   background: @color-swatch1;
-  border-right: 3px solid @color-swatch5;
-  border-left: 3px solid @color-swatch5;
+  border-right: 3px solid @color-swatch3;
+  border-left: 3px solid @color-swatch3;
 }
 
 .companytitle {
   position: relative;
   width: 100%;
-  border-top: 3px solid @color-swatch5;
+  border-top: 3px solid @color-swatch3;
   display: block;
   margin: 0 auto;
   padding:20px;
@@ -162,20 +162,213 @@ h1 {
 }
 
 .widget.companyname{
-  top: -45px;
   text-align: center;
   display: inline;
   text-align: center;
   padding: 0px 20px;
   margin: 0;
   background: @color-swatch1;
-  border-right: 3px solid @color-swatch5;
-  border-left: 3px solid @color-swatch5;
+  border-right: 3px solid @color-swatch3;
+  border-left: 3px solid @color-swatch3;
+  top:-45px;
 }
 
 body.edit .widget.navigation, body.edit .widget.extendednavigation {
  overflow: visible;
 }
+
+.menu-description{
+  margin-top:-25px;
+  padding:20px 0px;
+}
+
+/* ===============================
+   2. VARIABLE MEDIA QUERIES
+   =============================== */
+
+@tablet: ~"only screen and (max-width: 768px)";
+@mobile: ~"only screen and (max-width: 320px)";
+@media only screen and (max-width: 1084px);
+
+/* ===============================
+   3. CUSTOM CSS
+   =============================== */
+
+
+/* ===============================
+   4. MENU SECTIONS NAVIGATION
+   =============================== */
+
+.widget.menusections {
+    text-align: center;
+    padding: 0 0 15px 0;
+    min-height: 30px;
+    ul {
+        display: inline-block;
+        list-style: none;
+        margin: 0px;
+        padding: 0;
+        @media @tablet {
+            /* Hidden until nav icon is clicked */
+            display: none;
+            /* Then these styles are applied */
+            width: 100%;
+            margin: 30px 0 0;
+            background-color: @color-swatch1;
+        }
+
+        /* ALIGN CENTER */
+        &.align-center {
+            li {
+                text-align: center;
+                &:hover {
+                    li {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        /* ALIGN LEFT */
+        &.align-left {
+            li {
+                text-align: left;
+                &:hover {
+                    li {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+        /* ALIGN RIGHT */
+        &.align-right {
+            li {
+                text-align: right;
+                &:hover {
+                    li {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+        li {
+            padding: 0 15px;
+            float: left;
+            display: block;
+            padding-right: 20px;
+            @media @tablet {
+                    width: 100%;
+                    padding: 1em 0;
+                    border-bottom: 1px dotted @color-swatch6;
+            }
+            &:last-child {
+                    @media @tablet {
+                        border-bottom: 0;
+                    }
+            }
+
+            a {
+                display: block;
+                font-family:@font-swatch6-font-family;
+                font-size:@font-swatch6-font-size;
+                font-weight: @font-swatch6-font-weight;
+                color: @font-swatch6-color;
+                line-height:@font-swatch6-line-height;
+                letter-spacing: @font-swatch6-letter-spacing;
+                &:hover {
+                    text-decoration: underline;
+                }
+                &:after {
+                  content: "●";
+                  font-size: 0.7em;
+                  padding-left:10px;
+                  position: absolute;
+                  color: @color-swatch5;
+                }
+            }
+            &:last-child a:after {
+                            content:"";
+            }
+        }
+    }
+    a {
+            &.pull {
+                display: none;
+                @media @tablet {
+                    display: block;
+                    width: 100%;
+                    position: absolute;
+                    top: 10px;
+                    right: 49%;
+                    &:after {
+                        content:"";
+                        background: image('/images/nav-icon.png') no-repeat;
+                        width: 15px;
+                        height: 20px;
+                        display: inline-block;
+                        position: absolute;
+                        right: 0;
+                    }
+                }
+            }
+        }
+}
+
+            /* ITEMS */
+
+            .menu-items { /* ol */
+                column-count: 1;
+                column-gap: 50px;
+               -moz-column-count: 1;
+               -moz-column-gap: 50px;
+               -webkit-column-count: 1;
+               -webkit-column-gap : 50px;
+
+                @media @tablet { 
+                    column-count: 1;
+                    column-gap: 60px;
+                   -moz-column-count: 1;
+                   -moz-column-gap: 60px;
+                   -webkit-column-count: 1;
+                   -webkit-column-gap : 60px;
+                }
+
+                @media @mobile { 
+                    column-count: 1;
+                   -moz-column-count: 1;
+                   -webkit-column-count: 1;
+                }
+                
+                li {    /* menu-item */
+                    position: relative;
+                    display: inline-block;
+                    &.menu-item-promoted { /* menu-item-promoted */
+                        margin: 11px 1px 20px;
+                        .inner-item {
+                            border: 0;
+                            padding: 0;
+                            margin: 0;
+                        }
+                        &:after { 
+                           content: image('/images/star.png');
+                           position: absolute;
+                           top: 0.5em;
+                           left: 0;
+                           right:0;
+                           color: @color-swatch3;
+                           background-color: @color-swatch3;
+                           width:155px;
+                           height:20px;
+                           margin:0px auto;
+                           padding:0;
+                        }
+                        h3 {
+                            margin-top: 0 !important;
+                            margin-right: 1em !important;
+                        }
+                    }   /* end menu-item-promoted */
+
+                  }
+                }
 
 /* ===============================
    PROFILE WIDGET
@@ -387,7 +580,16 @@ header {
     display: inline-block;
 }
 
-
+.menu-item-nutritional-prop { 
+    font-size:@font-swatch5-font-size;
+    font-weight: @font-swatch5-font-weight;
+    line-height:@font-swatch5-line-height;
+    color: @font-swatch5-color;
+    float: left;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+                        }
 
 .menu-item-description, .menu-section-item-description, .standard-price, .menu-item-nutritional-title, .menu-item-nutritional-props, .variant-price, .menu-section-item-dietary-props {
     font-family:@font-swatch5-font-family;
@@ -423,20 +625,6 @@ header {
   -moz-border-radius: 5px;
   border-radius: 5px;
     padding: 3em 1em 1em 1em;
-}
-
-.menu-item-promoted:after {
-   content: image('/images/star.png');
-   position: absolute;
-   top: 0.5em;
-   left: 0;
-   right:0;
-   color: @color-swatch3;
-   background-color: @color-swatch5;
-   width:155px;
-   height:20px;
-   margin:0px auto;
-   padding:0;
 }
 
 .menu-item-promoted h3 {
@@ -533,7 +721,7 @@ header {
 }
 
 .vegetarian-icon {
-  background-color: #026B1B;
+  background-color: @color-swatch4;
   width: 25px;
   height: 25px;
       border: none;
@@ -548,13 +736,41 @@ header {
 
 .glutenFree-icon {
   background-image: image('/images/gf.png');
-  background-color: @color-swatch5;
+  background-color: @color-swatch4;
   width: 25px;
   height: 25px;
       border: none;
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;
   border-radius: 100px;
+  background-repeat: no-repeat;
+  background-size: 18px;
+  background-position: center;
+}
+
+.nutFree-icon {
+  background-color: @color-swatch4;
+  width: 25px;
+  height: 25px;
+      border: none;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  background-image: image('/images/nf.png');
+  background-repeat: no-repeat;
+  background-size: 18px;
+  background-position: center;
+}
+
+.dairyFree-icon {
+  background-color: @color-swatch4;
+  width: 25px;
+  height: 25px;
+      border: none;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  background-image: image('/images/df.png');
   background-repeat: no-repeat;
   background-size: 18px;
   background-position: center;
@@ -603,7 +819,7 @@ footer .wrapper .widget.image img{
    =============================== */
 
 footer {
-  padding: 4em 0 0 0;
+  padding: 12em 0 0 0;
   margin:0px auto;
   text-align:center;
   display:table;
@@ -1984,9 +2200,9 @@ hr.line.align-right {
 
 
   .menu-items, .menu-section-items {
-       -moz-column-count: 2;
+       -moz-column-count: 1;
        -moz-column-gap: 50px;
-       -webkit-column-count: 2;
+       -webkit-column-count: 1;
        -webkit-column-gap : 50px;
 }
 
@@ -2179,7 +2395,7 @@ footer {
 }
 
 header {
-  padding:0;
+  padding-top:30px;
 }
 
 .main{
@@ -2190,7 +2406,9 @@ header {
     top:-45px;
   }
 
-
+footer .wrapper .widget.image img {
+  margin:22px auto 0;
+}
 
 
 

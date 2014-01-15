@@ -1,5 +1,5 @@
 {
-    "name":"Menu Demo",
+    "name":"Northernsmokehouse",
     "thumbnail":"sycamore.png",
     "screenshot":"sycamore.png",
     "tags": {
@@ -12,7 +12,7 @@
         "Swatch 1": {
             "color1":"#ffffff",
             "color2":"#ffffff",
-            "color3":"#569087",
+            "color3":"#804f38",
             "color4":"#569087",
             "color5":"#804f38",
             "color6":"#804f38",
@@ -21,37 +21,37 @@
         "Swatch 2": {
             "color1":"#ffffff",
             "color2":"#72d0eb",
-            "color3":"#09d4b5",
+            "color3":"#959FA8",
             "color4":"#2f353e",
-            "color5":"#b4bec7",
-            "color6":"#434f5b",
+            "color5":"#959FA8",
+            "color6":"#959FA8",
             "color7":"#ffffff"
         },
         "Swatch 3": {
             "color1":"#ffffff",
-            "color2":"#72d0eb",
-            "color3":"#f3a41c",
-            "color4":"#2f353e",
-            "color5":"#b4bec7",
-            "color6":"#434f5b",
-            "color7":"#ffffff"
+            "color2":"#000000",
+            "color3":"#282828",
+            "color4":"#000000",
+            "color5":"#804f38",
+            "color6":"#804f38",
+            "color7":"#535E6F"
         },
         "Swatch 4": {
             "color1":"#ffffff",
             "color2":"#72d0eb",
-            "color3":"#3b3b3b",
-            "color4":"#2f353e",
-            "color5":"#b4bec7",
-            "color6":"#434f5b",
+            "color3":"#827b47",
+            "color4":"#593d31",
+            "color5":"#0FAC9F",
+            "color6":"#0FAC9F",
             "color7":"#ffffff"
         },
         "Swatch 5": {
             "color1":"#ffffff",
             "color2":"#72d0eb",
-            "color3":"#9553d9",
-            "color4":"#2f353e",
+            "color3":"#B30000",
+            "color4":"#B30000",
             "color5":"#b4bec7",
-            "color6":"#434f5b",
+            "color6":"#b4bec7",
             "color7":"#ffffff"
         }
     },
@@ -78,7 +78,7 @@
             "font-size": "14px",
             "font-weight": "700",
             "line-height": "28px",
-            "color": "@color-swatch3",
+            "color": "@color-swatch4",
             "letter-spacing": "inherit"
         },
         "font4": {
@@ -86,7 +86,7 @@
             "font-size": "14px",
             "font-weight": "600",
             "line-height": "24px",
-            "color": "@color-swatch5",
+            "color": "@color-swatch4",
             "letter-spacing": "inherit"
         },
         "font5": {
@@ -138,8 +138,8 @@
             "font-family": "Arvo",
             "font-size": "24px",
             "font-weight": "300",
-            "line-height": "42px",
-            "color": "@color-swatch5",
+            "line-height": "32px",
+            "color": "@color-swatch4",
             "letter-spacing": "inherit"
         }
     }
