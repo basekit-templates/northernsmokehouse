@@ -1,4 +1,8 @@
-@import templatecommon('/paypal.less');
+/* ===============================
+   IMPORT CSS
+   =============================== */
+
+@import "@{templateCommon}/basekit-bootstrap.less";
 
 body {
   background-color: @color-swatch1;
@@ -151,14 +155,12 @@ h1 {
 
 .companytitle {
   position: relative;
-  width: 100%;
   border-top: 3px solid @color-swatch3;
   display: block;
   margin: 0 auto;
-  padding:20px;
+  padding:25px;
   height:0;
   margin-top:30px;
-  margin-left:-20px;
 }
 
 .widget.companyname{
@@ -291,7 +293,7 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
         }
     }
     a {
-            &.pull {
+            &.menu-pull {
                 display: none;
                 @media @tablet {
                     display: block;
@@ -369,6 +371,12 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 
                   }
                 }
+
+.menu-subsection {
+  background-color:rgba(1, 1, 1, 0.05);
+  padding:20px;
+  margin:20px;
+}
 
 /* ===============================
    PROFILE WIDGET
@@ -516,11 +524,13 @@ footer .widget.profile .twitter span {
 
 header {
   padding-top: 30px;
+  background-color:transparent;
 }
 
 
 .companyheader {
   display: block;
+  float:none;
 }
 
 /* COMPANY NAME */
@@ -529,6 +539,7 @@ header {
   width: 100%;
   text-align: center;
   margin-top:10px;
+  float:none;
 }
 
 .companyname a:hover {
@@ -549,6 +560,7 @@ header {
 .widget.logo {
   width: 100%;
   text-align: center;
+  float:none;
 }
 
 
@@ -823,6 +835,8 @@ footer {
   margin:0px auto;
   text-align:center;
   display:table;
+  min-height:0;
+  background-color:transparent;
 }
 
 
@@ -894,7 +908,7 @@ footer {
   margin: 0;
 }
 
-.widget.extendednavigation a.pull {
+.widget.extendednavigation a.menu-pull {
   display: none;
 }
 
@@ -2233,7 +2247,7 @@ hr.line.align-right {
 
   /* NAV ICON */
 
-  .widget .extendednavigation a.pull {
+  .widget .extendednavigation a.menu-pull {
     display: block;
     width: 100%;
     position: absolute;
@@ -2241,7 +2255,7 @@ hr.line.align-right {
 
   }
 
-    .widget .extendednavigation a.pull:after {
+    .widget .extendednavigation a.meun-pull:after {
     content:"";
     background: image('/images/nav-icon.png') no-repeat;
     background-position: center;
