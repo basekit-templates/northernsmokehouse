@@ -140,7 +140,7 @@ blockquote {
 
 .menu-name {
   position: relative;
-  top: -43px;
+  top: -23px;
 }
 
 h1 {
@@ -259,10 +259,8 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
             }
         }
         li {
-            padding: 0 15px;
             float: left;
             display: block;
-            padding-right: 20px;
             @media @tablet {
                     width: 100%;
                     padding: 1em 0;
@@ -305,7 +303,7 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
                     display: block;
                     width: 100%;
                     position: absolute;
-                    top: 10px;
+                    top: -5px;
                     right: 49%;
                     &:after {
                         content:"";
@@ -359,7 +357,7 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
                         &:after { 
                            content: image('/images/star.png');
                            position: absolute;
-                           top: 0.5em;
+                           top: -1em;
                            left: 0;
                            right:0;
                            color: @color-swatch3;
@@ -568,6 +566,9 @@ header {
    MENU
    =============================== */
 
+.menu .menu-subsection {
+  margin:1.5em 1em;
+}
 
 .menu-items, .menu-section-items {
 }
@@ -603,7 +604,7 @@ header {
     padding: 0;
                         }
 
-.menu-item-description, .menu-section-item-description, .standard-price, .menu-item-nutritional-title, .menu-item-nutritional-props, .variant-price, .menu-section-item-dietary-props {
+.menu-item-description, .menu-section-item-description, .standard-price, .menu-item-nutritional-props, .variant-price, .menu-section-item-dietary-props {
     font-family:@font-swatch5-font-family;
     font-size:@font-swatch5-font-size;
     font-weight: @font-swatch5-font-weight;
@@ -629,7 +630,6 @@ header {
 
 }
 
-
 .menu-item-promoted {
     background-color: hsla(hue(@color-swatch1), saturation(@color-swatch1), lightness(lighten(@color-swatch1,10%)), 0.6); 
         border: none;
@@ -650,7 +650,16 @@ header {
     display:none;
 }
 
-
+.menu-item-image-wrap {
+    background-repeat: no-repeat;
+    clear: both;
+    width: 125px;
+    margin: 0 auto;
+    border-radius: 100%;
+    height: 125px;
+    background-size: cover;
+    background-position: center;
+}
 
 .menu-items,
 .menu-item-prices,
@@ -662,19 +671,14 @@ header {
     margin: 0;
 }
 
-
 .menu-items ul li {
   list-style: none;
 }
 
-
-
 .menu-header,
 .menu-section-header {
-    margin-bottom: 1em;
+
 }
-
-
 
 .menu-item-name,
 .menu-section-item-name {
@@ -758,7 +762,96 @@ float: left;
 width: 100%;
 }
 
+                        .menu-item-nutritional-prop { 
+                            font-size:@font-swatch5-font-size;
+                            font-weight: @font-swatch5-font-weight;
+                            line-height:@font-swatch5-line-height;
+                            color: @font-swatch5-color;
+                            float: left;
+                            width: 100%;
+                            margin: 0;
+                            padding: 0;
+                        }
 
+                .menu-section-item-dietary-props {
+                                margin-top: 0.5em;
+                                padding: 0;
+                                clear: both;
+                                display: block;
+                                .dietary-icon {
+                                    background-color: @color-swatch5;
+                                    width: auto;
+                                    height: 25px;
+                                    border: 0;
+                                    -webkit-border-radius: 5px;
+                                    -moz-border-radius: 5px;
+                                    border-radius: 5px;
+                                    background-repeat: no-repeat;
+                                    background-size: 19px;
+                                    background-position: center;
+                                    display: block;
+                                    font-family:@font-swatch5-font-family;
+                                    font-size:@font-swatch5-font-size;
+                                    z-index: 9999999;
+                                    color: @color-swatch1;
+                                    margin-right: 5px;
+                                    margin-bottom: 5px;
+                                }
+                                .vegetarian-icon {
+                                    &:before { 
+                                    content: "veggie";
+                                    padding: 0 8px;                  
+                                    }
+                                }
+                                .vegan-icon {
+                                    &:before { 
+                                    content: "vegan";
+                                    padding: 0 8px;
+                                    }
+                                }
+                                .glutenfree-icon {
+                                    &:before { 
+                                    content: "gf";
+                                    padding: 0 8px;
+                                    }
+                                }
+                                .nutfree-icon {
+                                    &:before { 
+                                    content: "nf";
+                                    padding: 0 8px;
+                                    }
+                                }
+                                .dairyfree-icon {
+                                    &:before { 
+                                    content: "df";
+                                    padding: 0 8px;
+                                    }
+                                }
+                                .not-spicy-icon {
+                                    display: none;
+                                }
+                                .spicy-icon {
+                                    &:before { 
+                                    content: "mild";
+                                    padding: 7px;
+                                    }
+                                  }
+
+                                .medium-spicy-icon {
+                                    &:before { 
+                                    content: "medium";
+                                    padding: 7px;
+                                    }
+                                  }
+
+                                .hot-icon {
+                                    &:before { 
+                                    content: "hot";
+                                    padding: 7px;
+                                    }
+                                }
+
+                            } /* end menu-section-item-dietary-props */ 
 
 footer .wrapper {
 
@@ -2263,6 +2356,14 @@ hr.line.align-right {
     padding: 10px 0;
   }
 
+  .widget.menusections ul li {
+  margin:0;
+}
+
+.widget.menusections ul li a:after {
+  display:none;
+}
+
 
 
   .widget.extendednavigation ul li:hover > ul li .text, .widget.extendednavigation ul li:hover > ul li.folder .text {
@@ -2297,7 +2398,7 @@ hr.line.align-right {
   }
 
   .menu-name{
-    top:-51px;
+    top:-23px;
   }
 
 
@@ -2361,13 +2462,20 @@ header {
 }
 
 .menu-name{
-    top:-45px;
+    top:-23px;
   }
 
 footer .wrapper .widget.image img {
   margin:22px auto 0;
 }
 
+.widget.menusections ul li {
+  margin:0;
+}
+
+.widget.menusections ul li a:after {
+  display:none;
+}
 
 
   /* COMPANY HEADER */
