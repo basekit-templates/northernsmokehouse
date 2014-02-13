@@ -647,7 +647,6 @@ header {
     border-radius:50%;
     width:120px;
     height:120px;
-    display:none;
 }
 
 .menu-item-image-wrap {
@@ -796,59 +795,6 @@ width: 100%;
                                     color: @color-swatch1;
                                     margin-right: 5px;
                                     margin-bottom: 5px;
-                                }
-                                .vegetarian-icon {
-                                    &:before { 
-                                    content: "veggie";
-                                    padding: 0 8px;                  
-                                    }
-                                }
-                                .vegan-icon {
-                                    &:before { 
-                                    content: "vegan";
-                                    padding: 0 8px;
-                                    }
-                                }
-                                .glutenfree-icon {
-                                    &:before { 
-                                    content: "gf";
-                                    padding: 0 8px;
-                                    }
-                                }
-                                .nutfree-icon {
-                                    &:before { 
-                                    content: "nf";
-                                    padding: 0 8px;
-                                    }
-                                }
-                                .dairyfree-icon {
-                                    &:before { 
-                                    content: "df";
-                                    padding: 0 8px;
-                                    }
-                                }
-                                .not-spicy-icon {
-                                    display: none;
-                                }
-                                .spicy-icon {
-                                    &:before { 
-                                    content: "mild";
-                                    padding: 7px;
-                                    }
-                                  }
-
-                                .medium-spicy-icon {
-                                    &:before { 
-                                    content: "medium";
-                                    padding: 7px;
-                                    }
-                                  }
-
-                                .hot-icon {
-                                    &:before { 
-                                    content: "hot";
-                                    padding: 7px;
-                                    }
                                 }
 
                             } /* end menu-section-item-dietary-props */ 
@@ -2477,6 +2423,9 @@ footer .wrapper .widget.image img {
   display:none;
 }
 
+.widget.menusections a.menu-pull {
+  top:5px;
+}
 
   /* COMPANY HEADER */
 
@@ -2580,7 +2529,7 @@ footer .wrapper .widget.image img {
 
 @media only screen and (min-width: 1140px) {
   .wrapper {
-    width: 848px; /* 1140px - 10% for margins */
+    width: 867px; /* 1140px - 10% for margins */
     margin: 0 auto;
   }
 }
