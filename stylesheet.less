@@ -37,22 +37,6 @@ body {
   display: block;
   margin: 0 auto;
   padding:20px;
-  top:30px;
-}
-
-.menu-name {
-  position: relative;
-  top: -23px;
-}
-
-h1 {
-  display: inline;
-  text-align: center;
-  padding: 0px 20px;
-  margin: 0;
-  background: @color-swatch1;
-  border-right: 3px solid @color-swatch3;
-  border-left: 3px solid @color-swatch3;
 }
 
 .companytitle {
@@ -65,7 +49,7 @@ h1 {
   margin-top: 30px;
 }
 
-.widget.companyname{
+.widget.companyname {
   text-align: center;
   display: inline;
   text-align: center;
@@ -81,34 +65,71 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
  overflow: visible;
 }
 
-.menu-description{
-  margin-top:-25px;
-  padding:20px 0px;
-}
 
-/* ===============================
-   MENU STYLES
-   =============================== */
-
-.menu-subsection {
-  background-color: darken(@color-swatch1,6%);
-  padding:20px;
-  margin:20px;
-  border-radius:20px;
-}
-
-/* ===============================
-   MENU SECTIONS NAVIGATION
-   =============================== */
+// ===============================
+// MENU SECTIONS NAVIGATION
+//  ===============================
 
 .widget {
     &.menu {
         text-align: center;
+        h1 {
+            display: inline;
+            position: relative;
+            top: -23px;
+            text-align: center;
+            padding: 0px 20px;
+            margin: 0;
+            background: @color-swatch1;
+            border-right: 3px solid @color-swatch3;
+            border-left: 3px solid @color-swatch3;
+        }
+        .menu-items {
+            column-count: 1;
+            column-gap: 50px;
+            -moz-column-count: 1;
+            -moz-column-gap: 50px;
+            -webkit-column-count: 1;
+            -webkit-column-gap : 50px;
+            p {
+                max-width: 60%;
+                float: none;
+                margin: 1em auto;
+            }
+        }
+        // Menu Subsection Styles
+        .menu-subsection {
+            background-color: darken(@color-swatch1,6%);
+            padding:20px;
+            margin:20px;
+            border-radius:20px;
+            .menu-items {
+                &.odd,
+                &.even {
+                    column-count: 1;
+                    column-gap: 50px;
+                    -moz-column-count: 1;
+                    -moz-column-gap: 50px;
+                    -webkit-column-count: 1;
+                    -webkit-column-gap : 50px;
+                }
+            }
+        }
+        // Font Scale-downs
+        h4 {
+            font-size: bkscale(@font-swatch4-font-size,0.85);
+        }
+        .menu-item-nutritional-prop {
+            font-size: bkscale(@font-swatch5-font-size,0.85);
+        }
+        .dietary-icon {
+            font-size: bkscale(@font-swatch5-font-size,0.8);   
+            padding: 0px 4px;
+        }
     }
     &.menusections {
         padding: 0;
-        margin: 0 0 2em;
-        min-height: 30px;
+        margin: 0 0 4em;
         ul {
             margin: 0;
             text-align: center;

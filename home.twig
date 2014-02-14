@@ -12,7 +12,7 @@
             <div class="companyheader clearfix">
                 {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
                     <div class="companytitle">
-                        {{widget('companyname', 'companyname', {"business": "THE NORTHEN SMOKE HOUSE"})|raw}}
+                        {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
                     </div>
                 {{widget('menusections', 'menusections1', {})|raw}}
             </div>
@@ -20,6 +20,10 @@
     </header>
 
     {{widget('menu', 'menu1', {})|raw}}
+
+    <div class="wrapper">
+        {{zone('main')|raw}}
+    </div>
 
     <footer class="bk-footer">
         <div class="wrapper clearfix">
