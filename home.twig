@@ -4,9 +4,11 @@
 {% block content %}
 
 <div class="canvas">
-    <header>
+    <header class="bk-header">
         <div class="wrapper clearfix">
-
+            {% if pages|length > 1 %}
+                {{widget('extendednavigation', 'navigationheader', {})|raw}}
+            {% endif %}
             <div class="companyheader clearfix">
                 {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
                     <div class="companytitle">
@@ -14,21 +16,19 @@
                     </div>
                 {{widget('menusections', 'menusections1', {})|raw}}
             </div>
-           
         </div><!--end wrapper clearfix-->
     </header>
 
     {{widget('menu', 'menu1', {})|raw}}
 
-
-    <footer>
+    <footer class="bk-footer">
         <div class="wrapper clearfix">
-                    {{widget('image', 'footercolumn1image', { 'src': asset('images/footer-image.png'), 'title': '', 'alt': '', 'fileName': 'footer-image.png', 'fileSize': '58kb', 'imageSize': '269 x 237', 'imageWidth': '269'})|raw}}
-                    {{widget('profile', 'address', { 'profileType':'address', 'address':'profile'})|raw}}
-                    {{widget('profile', 'phone', { 'profileType':'phone', 'phone':'profile'})|raw}}
+            {{widget('image', 'footercolumn1image', { 'src': asset('images/footer-image.png'), 'title': '', 'alt': '', 'fileName': 'footer-image.png', 'fileSize': '58kb', 'imageSize': '269 x 237', 'imageWidth': '269'})|raw}}
+            {{widget('profile', 'address', { 'profileType':'address', 'address':'profile'})|raw}}
+            {{widget('profile', 'phone', { 'profileType':'phone', 'phone':'profile'})|raw}}
         </div>
-     
     </footer>
+
 </div>
 
 {% endblock %}
