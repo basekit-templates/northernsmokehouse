@@ -100,18 +100,16 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
                 -webkit-column-count: 1;
                 -webkit-column-gap : 50px;
             }
+            .menu-item {
+                &:last-child {
+                    margin-bottom: 3em;
+                }
+            }
             p {
                 max-width: 60%;
                 float: none;
                 margin: 1em auto;
             }
-        }
-        // Menu Subsection Styles
-        .menu-subsection {
-            background-color: darken(@color-swatch1,6%);
-            padding:20px;
-            margin:20px;
-            border-radius:20px;
         }
         // Font Scale-downs
         h4 {
@@ -293,10 +291,6 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 /* ===============================
    MENU
    =============================== */
-
-.menu .menu-subsection {
-  margin:1.5em 1em;
-}
 
 .menu-items, .menu-section-items {
 }
