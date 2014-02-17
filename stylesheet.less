@@ -83,6 +83,13 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
             background: @color-swatch1;
             border-right: 3px solid @color-swatch3;
             border-left: 3px solid @color-swatch3;
+            @media @mobile {
+                display: block;
+                padding: 20px 20px 0;
+                background-color: transparent;
+                border-left: none;
+                border-right: none;
+            }
         }
         .menu-items {
             column-count: 1;
