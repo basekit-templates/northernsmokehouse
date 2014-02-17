@@ -106,11 +106,11 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
             .menu-items {
                 &.odd,
                 &.even {
-                    column-count: 1;
+                    column-count: 1!important;
                     column-gap: 50px;
-                    -moz-column-count: 1;
+                    -moz-column-count: 1!important;
                     -moz-column-gap: 50px;
-                    -webkit-column-count: 1;
+                    -webkit-column-count: 1!important;
                     -webkit-column-gap : 50px;
                 }
             }
@@ -527,6 +527,10 @@ footer.bk-footer {
 /* ===============================
    EXTENDED NAVIGATION
    =============================== */
+
+.widget.extendednavigation {
+    .clearfix;
+}
 
 .widget.extendednavigation ul {
     padding: 10px 0;
@@ -1279,18 +1283,11 @@ footer.bk-footer {
 
 @media only screen and (max-width: 480px) {
 
-    /* MENU */
-
-    .menu-items, .menu-section-items {
-       -moz-column-count: 1;
-       -moz-column-gap: 50px;
-       -webkit-column-count: 1;
-       -webkit-column-gap : 50px;
-}
+/* MENU */
 
 .menu-item, .menu-section-item {
-margin-bottom: 1.5em;
-padding-bottom: 1.5em;
+    margin-bottom: 1.5em;
+    padding-bottom: 1.5em;
 }
 
 .companytitle{
