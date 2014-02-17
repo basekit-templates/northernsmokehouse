@@ -91,6 +91,15 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
             -moz-column-gap: 50px;
             -webkit-column-count: 1;
             -webkit-column-gap : 50px;
+            &.odd,
+            &.even {
+                column-count: 1;
+                column-gap: 50px;
+                -moz-column-count: 1;
+                -moz-column-gap: 50px;
+                -webkit-column-count: 1;
+                -webkit-column-gap : 50px;
+            }
             p {
                 max-width: 60%;
                 float: none;
@@ -103,17 +112,6 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
             padding:20px;
             margin:20px;
             border-radius:20px;
-            .menu-items {
-                &.odd,
-                &.even {
-                    column-count: 1!important;
-                    column-gap: 50px;
-                    -moz-column-count: 1!important;
-                    -moz-column-gap: 50px;
-                    -webkit-column-count: 1!important;
-                    -webkit-column-gap : 50px;
-                }
-            }
         }
         // Font Scale-downs
         h4 {
