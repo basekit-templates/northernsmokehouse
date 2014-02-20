@@ -97,24 +97,13 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
             }
         }
         .menu-items {
-            @media @tablet {
-              &.odd,
-              &.even {
-                  column-count: 1;
-                  column-gap: 0;
-                  -moz-column-count: 1;
-                  -moz-column-gap: 0;
-                  -webkit-column-count: 1;
-                  -webkit-column-gap : 0;
-              }
-            }
             .menu-item {
                 &:last-child {
                     margin-bottom: 3em;
                 }
             }
             p {
-                margin: .8em auto;
+                margin: 1em auto;
             }
         }
         // Font Scale-downs
@@ -315,6 +304,10 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 .menu-section-item {
     position: relative;
     display: block;
+}
+
+.inner-item {
+    display: inline-block;
 }
 
 .menu-item-nutritional-prop { 
