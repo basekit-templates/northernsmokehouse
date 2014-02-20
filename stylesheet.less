@@ -73,6 +73,9 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 .widget {
     &.menu {
         text-align: center;
+        .main {
+          padding: 0 50px;
+        }
         h1 {
             display: inline;
             position: relative;
@@ -94,20 +97,16 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
             }
         }
         .menu-items {
-            column-count: 1;
-            column-gap: 50px;
-            -moz-column-count: 1;
-            -moz-column-gap: 50px;
-            -webkit-column-count: 1;
-            -webkit-column-gap : 50px;
-            &.odd,
-            &.even {
-                column-count: 1;
-                column-gap: 50px;
-                -moz-column-count: 1;
-                -moz-column-gap: 50px;
-                -webkit-column-count: 1;
-                -webkit-column-gap : 50px;
+            @media @tablet {
+              &.odd,
+              &.even {
+                  column-count: 1;
+                  column-gap: 0;
+                  -moz-column-count: 1;
+                  -moz-column-gap: 0;
+                  -webkit-column-count: 1;
+                  -webkit-column-gap : 0;
+              }
             }
             .menu-item {
                 &:last-child {
@@ -115,9 +114,7 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
                 }
             }
             p {
-                max-width: 60%;
-                float: none;
-                margin: 1em auto;
+                margin: .8em auto;
             }
         }
         // Font Scale-downs
