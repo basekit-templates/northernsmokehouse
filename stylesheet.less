@@ -73,6 +73,9 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 .widget {
     &.menu {
         text-align: center;
+        .main {
+          padding: 0 50px;
+        }
         h1 {
             display: inline;
             position: relative;
@@ -94,29 +97,29 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
             }
         }
         .menu-items {
-            column-count: 1;
-            column-gap: 50px;
-            -moz-column-count: 1;
-            -moz-column-gap: 50px;
-            -webkit-column-count: 1;
-            -webkit-column-gap : 50px;
-            &.odd,
-            &.even {
-                column-count: 1;
-                column-gap: 50px;
-                -moz-column-count: 1;
-                -moz-column-gap: 50px;
-                -webkit-column-count: 1;
-                -webkit-column-gap : 50px;
-            }
+              &.odd,
+              &.even {
+                  column-count: 2;
+                  column-gap: 50px;
+                  -moz-column-count: 2;
+                  -moz-column-gap: 50px;
+                  -webkit-column-count: 2;
+                  -webkit-column-gap : 50px;
+                  @media @tablet {
+                    column-count: 1;
+                    column-gap: 50px;
+                    -moz-column-count: 1;
+                    -moz-column-gap: 50px;
+                    -webkit-column-count: 1;
+                    -webkit-column-gap : 50px;
+                  }
+              }
             .menu-item {
                 &:last-child {
                     margin-bottom: 3em;
                 }
             }
             p {
-                max-width: 60%;
-                float: none;
                 margin: 1em auto;
             }
         }
@@ -318,6 +321,11 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 .menu-section-item {
     position: relative;
     display: block;
+}
+
+.inner-item {
+    display: block;
+    .clearfix;
 }
 
 .menu-item-nutritional-prop { 
