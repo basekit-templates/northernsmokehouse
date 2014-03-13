@@ -62,7 +62,11 @@ body {
 }
 
 body.edit .widget.navigation, body.edit .widget.extendednavigation {
- overflow: visible;
+  overflow: visible;
+}
+
+.widget.paypalbuynow .widget.button.paypal {
+  padding: 10px 8px 10px 35px;
 }
 
 
@@ -120,7 +124,7 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
                 }
             }
             p {
-                margin: 1em auto;
+                
             }
         }
         // Font Scale-downs
@@ -431,11 +435,6 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
     display: inline-block;
     margin-bottom: 20px;
     padding:10px;
-}
-
-.menu-item-description,
-.menu-section-item-description {
-    margin-bottom: 1em;
 }
 
 .menu-items .menu-item .menu-item-nutritional-props .menu-item-nutritional-prop {
@@ -1278,6 +1277,23 @@ footer.bk-footer {
 
     .widget.extendednavigation ul li:hover > ul li {
         padding: 10px 0;
+    }
+
+}
+
+/* ===============================
+   SIDE IPHONE WIDTH
+   =============================== */
+
+@media only screen and (max-width: 530px) {
+
+    .companytitle{
+      border:0;
+    }
+
+    .widget.companyname{
+      border:0;
+      padding:0;
     }
 
 }
